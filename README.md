@@ -81,7 +81,9 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 
 ## Writing
 
-> Skilluri pentru scriere și conținut — în curând.
+| Skill | Comandă | Ce face |
+|---|---|---|
+| [ro-humanizer](writing/ro-humanizer/) | `/ro-humanizer` | Elimină artefactele AI din text românesc în 4 etape |
 
 ---
 
