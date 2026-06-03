@@ -58,6 +58,7 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 | [plan](productivitate/plan/) | `/plan` | Planifică un feature nou înainte de a scrie cod |
 | [ortografie-ro](productivitate/ortografie-ro/) | `/ortografie-ro` | Corectează capitalizarea în texte românești |
 | [savebook](productivitate/savebook/) | `/savebook` | Salvează o carte sau resursă în lista de lectură |
+| [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
 | [imagine](productivitate/imagine/) | `/imagine` | Generează o imagine dintr-un prompt |
 
 ## Tehnic
@@ -73,17 +74,29 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 
 ## Dev
 
-> Skilluri pentru dezvoltare — în curând.
+| Skill | Comandă | Ce face |
+|---|---|---|
+| [tailwind](dev/tailwind/) | `/tailwind` | Stilizare cu Tailwind CSS v3/v4, responsive, teme custom |
+| [animejs](dev/animejs/) | `/animejs` | Animații web cu Anime.js |
+| [gsap](dev/gsap/) | `/gsap` | Animații performante cu GSAP și ScrollTrigger |
+| [css-animations](dev/css-animations/) | `/css-animations` | Animații CSS cu keyframes și transitions |
+| [waapi](dev/waapi/) | `/waapi` | Animații native cu Web Animations API |
+| [lottie](dev/lottie/) | `/lottie` | Integrare și control animații Lottie (JSON din After Effects) |
+| [three](dev/three/) | `/three` | Grafică 3D în browser cu Three.js |
 
 ## Design
 
-> Skilluri pentru design — în curând.
+| Skill | Comandă | Ce face |
+|---|---|---|
+| [huashu-design](design/huashu-design/) | `/huashu-design` | Prototipuri și slide-uri HTML hi-fi, animații, design exploration |
 
 ## Writing
 
 | Skill | Comandă | Ce face |
 |---|---|---|
 | [ro-humanizer](writing/ro-humanizer/) | `/ro-humanizer` | Elimină artefactele AI din text românesc în 4 etape |
+| [humanizer](writing/humanizer/) | `/humanizer` | Elimină artefactele AI din text englezesc (30 de pattern-uri) |
+| [copy-pagina-vanzare](writing/copy-pagina-vanzare/) | `/copy-pagina-vanzare` | Generează copy complet pentru pagina de vânzare prin 9 întrebări |
 
 ---
 
