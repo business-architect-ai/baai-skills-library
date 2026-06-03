@@ -2,18 +2,26 @@
 
 Librărie de skilluri pentru Claude Code, construită pentru membrii comunității Business Architect AI.
 
-Fiecare skill e un fișier `.md` pe care îl copiezi în folderul `.claude/commands/` și devine disponibil instant ca comandă în Claude Code.
+Fiecare skill e un fișier `.md` pe care îl copiezi în folderul potrivit și devine disponibil instant ca comandă în Claude Code.
+
+Există două tipuri de skilluri:
+- **Command skills** (cele mai multe): se copiază în `~/.claude/commands/`
+- **Plugin skills** (marcate cu ★): se copiază în `~/.claude/skills/[nume]/SKILL.md`
 
 ## Instalare rapidă
 
 ```bash
-# Un singur skill (exemplu)
+# Command skill (un singur skill, exemplu)
 cp strategie/biz-review/skill.md ~/.claude/commands/biz-review.md
 
-# O categorie întreagă
+# Plugin skill (exemplu)
+mkdir -p ~/.claude/skills/linkedin-post-writer
+cp writing/linkedin-post-writer/skill.md ~/.claude/skills/linkedin-post-writer/SKILL.md
+
+# Toate command skillurile dintr-o categorie
 for d in strategie/*/; do cp "$d/skill.md" ~/.claude/commands/"$(basename $d).md"; done
 
-# Toate skillurile
+# Toate command skillurile
 for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$(basename $d).md"; done
 ```
 
@@ -38,6 +46,12 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 | [biz-customer](marketing/biz-customer/) | `/biz-customer` | Construiește avatar client detaliat din date reale |
 | [biz-funnel](marketing/biz-funnel/) | `/biz-funnel` | Diagnostic funnel, identifică scurgeri și fix-uri |
 | [biz-offer](marketing/biz-offer/) | `/biz-offer` | Construiește sau revizuiește oferta comercială |
+| [email-sequence](marketing/email-sequence/) ★ | `/email-sequence` | Secvențe de email: welcome, nurture, re-engagement, sales |
+| [cold-email](marketing/cold-email/) ★ | `/cold-email` | Cold outreach B2B cu secvențe de follow-up și deliverability |
+| [content-strategy](marketing/content-strategy/) ★ | `/content-strategy` | Strategie de conținut pe piloni, topic clusters, calendar |
+| [social-content](marketing/social-content/) ★ | `/social-content` | Conținut social media pe orice platformă cu sistem de repurposing |
+| [x-twitter-growth](marketing/x-twitter-growth/) ★ | `/x-twitter-growth` | Creștere X/Twitter: algoritm 2026, thread-uri, strategie reply |
+| [email-marketing-bible](marketing/email-marketing-bible/) ★ | `/email-marketing-bible` | Referință completă email marketing: 908 surse, 19 industrii |
 
 ## Operațiuni
 
@@ -97,6 +111,10 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 | [ro-humanizer](writing/ro-humanizer/) | `/ro-humanizer` | Elimină artefactele AI din text românesc în 4 etape |
 | [humanizer](writing/humanizer/) | `/humanizer` | Elimină artefactele AI din text englezesc (30 de pattern-uri) |
 | [copy-pagina-vanzare](writing/copy-pagina-vanzare/) | `/copy-pagina-vanzare` | Generează copy complet pentru pagina de vânzare prin 9 întrebări |
+| [linkedin-post-writer](writing/linkedin-post-writer/) ★ | `/linkedin-post-writer` | Scrie postări LinkedIn cu cele 10 formule de hook 2026 |
+| [linkedin-hook-extractor](writing/linkedin-hook-extractor/) ★ | `/linkedin-hook-extractor` | Demontează hookul oricărei postări virale și generează template |
+| [linkedin-content-planner](writing/linkedin-content-planner/) ★ | `/linkedin-content-planner` | Plan de conținut LinkedIn pe 7 zile cu piloni, formule, ore |
+| [linkedin-humanizer](writing/linkedin-humanizer/) ★ | `/linkedin-humanizer` | Elimină semnele AI din drafturi LinkedIn (3 tiere + modul audit) |
 
 ---
 
@@ -104,4 +122,14 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 
 Un skill e un fișier Markdown pe care Claude Code îl citește ca instrucțiuni atunci când scrii `/nume-skill`. Fișierul definește ce rol ia Claude, ce întrebări pune și ce format produce.
 
+**Skillurile marcate cu ★** sunt de tip plugin și se instalează diferit față de cele standard:
+```bash
+mkdir -p ~/.claude/skills/[nume-skill]
+cp [categorie]/[nume-skill]/skill.md ~/.claude/skills/[nume-skill]/SKILL.md
+```
+
 Cele mai multe skilluri includ un **Learning Engine** care salvează preferințele tale în `~/.claude/skill-memory/`. La a doua rulare, skillul știe deja contextul tău și nu mai întreabă de la zero.
+
+---
+
+*Skillurile marcate cu sursă externă sunt importate cu permisiunea autorilor (MIT License).*
