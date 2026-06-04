@@ -1,10 +1,10 @@
 # BAAI Skills Library
 
-Librărie de skilluri pentru Claude Code, construită pentru membrii comunității Business Architect AI.
+Librărie de skilluri pentru agenți AI, construită pentru membrii comunității Business Architect AI.
 
-Fiecare skill e un fișier `.md` pe care îl copiezi în folderul potrivit și devine disponibil instant ca comandă în Claude Code.
+Fiecare skill e un fișier `.md` cu instrucțiuni pe care agentul le citește și le urmează. Librăria acoperă mai multe platforme: **Claude Code**, **Codex** și altele compatibile cu formatul SKILL.md.
 
-Există două tipuri de skilluri:
+Există două tipuri de skilluri pentru Claude Code:
 - **Command skills** (cele mai multe): se copiază în `~/.claude/commands/`
 - **Plugin skills** (marcate cu ★): se copiază în `~/.claude/skills/[nume]/SKILL.md`
 
@@ -13,6 +13,8 @@ Unele skilluri noi sunt marcate cu compatibilitate explicită:
 - `compatibility: codex-and-claude-code` — pot fi instalate și în Codex, și în Claude Code
 
 ## Instalare rapidă
+
+### Claude Code
 
 ```bash
 # Command skill (un singur skill, exemplu)
@@ -34,6 +36,19 @@ for d in strategie/*/; do cp "$d/skill.md" ~/.claude/commands/"$(basename $d).md
 
 # Toate command skillurile
 for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$(basename $d).md"; done
+```
+
+### Codex
+
+```bash
+# Un singur skill (exemplu)
+mkdir -p ~/.codex/skills/linkedin-post-writer
+cp writing/linkedin-post-writer/skill.md ~/.codex/skills/linkedin-post-writer/SKILL.md
+
+# Toate skillurile compatibile Codex
+for d in */*/; do
+  [ -f "$d/skill.md" ] && mkdir -p ~/.codex/skills/"$(basename $d)" && cp "$d/skill.md" ~/.codex/skills/"$(basename $d)"/SKILL.md
+done
 ```
 
 ---
@@ -134,9 +149,14 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 
 ## Cum funcționează skillurile
 
-Un skill e un fișier Markdown pe care Claude Code îl citește ca instrucțiuni atunci când scrii `/nume-skill`. Fișierul definește ce rol ia Claude, ce întrebări pune și ce format produce.
+Un skill e un fișier Markdown cu instrucțiuni pe care agentul le citește atunci când invoci comanda. Fișierul definește ce rol ia agentul, ce întrebări pune și ce format produce.
 
-**Skillurile marcate cu ★** sunt de tip plugin și se instalează diferit față de cele standard:
+**Compatibilitate:**
+- **Claude Code** — command skills (`/nume-skill`) și plugin skills (★)
+- **Codex** — skillurile cu format SKILL.md funcționează direct în Codex Marketplace
+- **Alte platforme** — orice agent care citește fișiere Markdown ca instrucțiuni
+
+**Skillurile marcate cu ★** sunt de tip plugin pentru Claude Code:
 ```bash
 mkdir -p ~/.claude/skills/[nume-skill]
 cp [categorie]/[nume-skill]/skill.md ~/.claude/skills/[nume-skill]/SKILL.md
