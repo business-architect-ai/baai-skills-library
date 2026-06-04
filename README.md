@@ -72,6 +72,7 @@ done
 | [biz-customer](marketing/biz-customer/) | `/biz-customer` | Construiește avatar client detaliat din date reale |
 | [biz-funnel](marketing/biz-funnel/) | `/biz-funnel` | Diagnostic funnel, identifică scurgeri și fix-uri |
 | [biz-offer](marketing/biz-offer/) | `/biz-offer` | Construiește sau revizuiește oferta comercială |
+| [gtm-strategy](marketing/gtm-strategy/) | `/gtm-strategy` | Strategie go-to-market cu ICP, poziționare, canale, KPI-uri și roadmap 30/60/90 |
 | [email-sequence](marketing/email-sequence/) ★ | `/email-sequence` | Secvențe de email: welcome, nurture, re-engagement, sales |
 | [cold-email](marketing/cold-email/) ★ | `/cold-email` | Cold outreach B2B cu secvențe de follow-up și deliverability |
 | [content-strategy](marketing/content-strategy/) ★ | `/content-strategy` | Strategie de conținut pe piloni, topic clusters, calendar |
@@ -96,6 +97,7 @@ done
 | [thinkmap](productivitate/thinkmap/) | `/thinkmap` | Cartografiază stilul de gândire pe 14 dimensiuni cognitive |
 | [xlsx](productivitate/xlsx/) | `/xlsx` | Analizează și procesează fișiere Excel sau CSV |
 | [plan](productivitate/plan/) | `/plan` | Planifică un feature nou înainte de a scrie cod |
+| [create-prd](productivitate/create-prd/) | `/create-prd` | Creează PRD complet pentru produs, feature sau inițiativă |
 | [ortografie-ro](productivitate/ortografie-ro/) | `/ortografie-ro` | Corectează capitalizarea în texte românești |
 | [savebook](productivitate/savebook/) | `/savebook` | Salvează o carte sau resursă în lista de lectură |
 | [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
