@@ -1,0 +1,14 @@
+{
+  "name": "audit-site-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local website audit runner that coordinates technical, UX, design-system, and visual-review tools.",
+  "bin": {
+    "audit-site": "./bin/audit-site.mjs"
+  },
+  "scripts": {
+    "audit": "node ./bin/audit-site.mjs",
+    "check": "node --check ./bin/audit-site.mjs"
+  }
+}

@@ -8,6 +8,10 @@ Există două tipuri de skilluri:
 - **Command skills** (cele mai multe): se copiază în `~/.claude/commands/`
 - **Plugin skills** (marcate cu ★): se copiază în `~/.claude/skills/[nume]/SKILL.md`
 
+Unele skilluri noi sunt marcate cu compatibilitate explicită:
+- `compatibility: claude-code-only` — rulează doar în Claude Code
+- `compatibility: codex-and-claude-code` — pot fi instalate și în Codex, și în Claude Code
+
 ## Instalare rapidă
 
 ```bash
@@ -17,6 +21,13 @@ cp strategie/biz-review/skill.md ~/.claude/commands/biz-review.md
 # Plugin skill (exemplu)
 mkdir -p ~/.claude/skills/linkedin-post-writer
 cp writing/linkedin-post-writer/skill.md ~/.claude/skills/linkedin-post-writer/SKILL.md
+
+# Plugin skill compatibil Codex (exemplu)
+mkdir -p ~/.codex/skills/site-audit-agent
+cp tehnic/site-audit-agent/skill.md ~/.codex/skills/site-audit-agent/SKILL.md
+cp -R tehnic/site-audit-agent/tools ~/.codex/skills/site-audit-agent/
+cp -R tehnic/site-audit-agent/references ~/.codex/skills/site-audit-agent/
+cp -R tehnic/site-audit-agent/prompts ~/.codex/skills/site-audit-agent/
 
 # Toate command skillurile dintr-o categorie
 for d in strategie/*/; do cp "$d/skill.md" ~/.claude/commands/"$(basename $d).md"; done
@@ -85,6 +96,7 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 | [review-pr](tehnic/review-pr/) | `/review-pr` | Review complet PR cu agenți specializați în paralel |
 | [code-review](tehnic/code-review/) | `/code-review` | Code review pentru un pull request pe GitHub |
 | [security-check](tehnic/security-check/) | `/security-check` | Audit rapid de securitate: secrets expuse, vulnerabilități npm |
+| [site-audit-agent](tehnic/site-audit-agent/) ★ | `/site-audit-agent` | Audit complet site: SEO, accessibility, performance, security, design tokens, prompt remediere Claude Code |
 
 ## Dev
 
