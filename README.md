@@ -65,6 +65,8 @@ done
 | [biz-pricing](strategie/biz-pricing/) | `/biz-pricing` | Review strategie de preț, benchmarking, recomandare |
 | [biz-pitch](strategie/biz-pitch/) | `/biz-pitch` | Review și rescriere pitch sau prezentare |
 | [battlecard-system](strategie/battlecard-system/) | `/battlecard-system` | Battlecard competitiv pentru sales: diferențiatori, talk track, obiecții și win/loss signals |
+| [call-brief-framework](strategie/call-brief-framework/) | `/call-brief-framework` | Call brief pentru sales: obiectiv, stakeholderi, agenda, mesaje, întrebări și follow-up |
+| [objection-handling](strategie/objection-handling/) | `/objection-handling` | Răspunsuri la obiecții de vânzări cu LACE, proof mapping și adaptare pe canal |
 
 ## Marketing
 
