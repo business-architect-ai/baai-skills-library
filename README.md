@@ -62,6 +62,7 @@ done
 | [biz-competitor](strategie/biz-competitor/) | `/biz-competitor` | Analiză competitivă cu hartă și recomandări |
 | [biz-pricing](strategie/biz-pricing/) | `/biz-pricing` | Review strategie de preț, benchmarking, recomandare |
 | [biz-pitch](strategie/biz-pitch/) | `/biz-pitch` | Review și rescriere pitch sau prezentare |
+| [battlecard-system](strategie/battlecard-system/) | `/battlecard-system` | Battlecard competitiv pentru sales: diferențiatori, talk track, obiecții și win/loss signals |
 
 ## Marketing
 
@@ -74,6 +75,7 @@ done
 | [biz-offer](marketing/biz-offer/) | `/biz-offer` | Construiește sau revizuiește oferta comercială |
 | [gtm-strategy](marketing/gtm-strategy/) | `/gtm-strategy` | Strategie go-to-market cu ICP, poziționare, canale, KPI-uri și roadmap 30/60/90 |
 | [message-architecture](marketing/message-architecture/) | `/message-architecture` | Arhitectură de mesaj cu public, promisiune, proof points, hook bank și CTA matrix |
+| [deliverability-ops](marketing/deliverability-ops/) | `/deliverability-ops` | Diagnostic email deliverability: reputație, SPF/DKIM/DMARC, list health, warmup și compliance |
 | [email-sequence](marketing/email-sequence/) ★ | `/email-sequence` | Secvențe de email: welcome, nurture, re-engagement, sales |
 | [cold-email](marketing/cold-email/) ★ | `/cold-email` | Cold outreach B2B cu secvențe de follow-up și deliverability |
 | [content-strategy](marketing/content-strategy/) ★ | `/content-strategy` | Strategie de conținut pe piloni, topic clusters, calendar |
