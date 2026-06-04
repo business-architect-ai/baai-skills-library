@@ -135,13 +135,7 @@ Dupa import si inainte de push, ruleaza auditul pe skillurile noi.
 
 Foloseste `tehnic/skill-quality-audit/skill.md` ca protocol.
 
-Pentru fiecare runda, creeaza:
-
-```text
-SKILL_QUALITY_AUDIT_ROUND_[N].md
-```
-
-Auditul trebuie sa includa:
+Auditul trebuie sa verifice:
 - verdict: accept / accept cu modificari / respinge temporar
 - scor pe criterii
 - compatibility check
@@ -149,7 +143,7 @@ Auditul trebuie sa includa:
 - riscuri si controale introduse
 - decizia recomandata
 
-Daca auditul gaseste probleme mici, aplica fixurile in acelasi commit.
+Nu comite rapoarte de audit pe runde in repo by default. Pastreaza raportul doar daca Dan cere explicit arhivarea lui sau daca auditul contine o decizie de governance care trebuie pastrata. Daca auditul gaseste probleme mici, aplica fixurile in acelasi commit.
 
 ## 7. Git Protocol
 
@@ -199,7 +193,7 @@ Inainte de push, confirma:
 - [ ] `README.md` exista
 - [ ] `compatibility` este justificat
 - [ ] README principal actualizat
-- [ ] audit de calitate adaugat sau actualizat
+- [ ] audit de calitate rulat; raport comis doar daca este necesar
 - [ ] nu exista suprapunere neexplicata
 - [ ] `git pull --rebase` inainte de push
 - [ ] repo curat dupa push
