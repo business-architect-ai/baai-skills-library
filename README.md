@@ -73,6 +73,7 @@ done
 | [biz-funnel](marketing/biz-funnel/) | `/biz-funnel` | Diagnostic funnel, identifică scurgeri și fix-uri |
 | [biz-offer](marketing/biz-offer/) | `/biz-offer` | Construiește sau revizuiește oferta comercială |
 | [gtm-strategy](marketing/gtm-strategy/) | `/gtm-strategy` | Strategie go-to-market cu ICP, poziționare, canale, KPI-uri și roadmap 30/60/90 |
+| [message-architecture](marketing/message-architecture/) | `/message-architecture` | Arhitectură de mesaj cu public, promisiune, proof points, hook bank și CTA matrix |
 | [email-sequence](marketing/email-sequence/) ★ | `/email-sequence` | Secvențe de email: welcome, nurture, re-engagement, sales |
 | [cold-email](marketing/cold-email/) ★ | `/cold-email` | Cold outreach B2B cu secvențe de follow-up și deliverability |
 | [content-strategy](marketing/content-strategy/) ★ | `/content-strategy` | Strategie de conținut pe piloni, topic clusters, calendar |
@@ -114,6 +115,7 @@ done
 | [code-review](tehnic/code-review/) | `/code-review` | Code review pentru un pull request pe GitHub |
 | [security-check](tehnic/security-check/) | `/security-check` | Audit rapid de securitate: secrets expuse, vulnerabilități npm |
 | [site-audit-agent](tehnic/site-audit-agent/) ★ | `/site-audit-agent` | Audit complet site: SEO, accessibility, performance, security, design tokens, prompt remediere Claude Code |
+| [skill-quality-audit](tehnic/skill-quality-audit/) | `/skill-quality-audit` | Audit de calitate pentru skilluri: compatibilitate, structură, trigger rules, riscuri și suprapuneri |
 
 ## Dev
 
