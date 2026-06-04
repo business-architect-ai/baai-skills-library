@@ -126,13 +126,55 @@ Dacă skillul tău nu se încadrează în nicio categorie existentă, propune un
 
 ---
 
+## Protocol de colaborare Claude + Codex
+
+Această librărie este întreținută în paralel de Claude Code și Codex. Ambii agenți lucrează direct pe `main`. Regulile de mai jos previn conflicte și asigură că metadata rămâne consistentă.
+
+### Reguli de bază (obligatorii pentru ambii agenți)
+
+1. **`git pull` înainte de orice commit.** Fără excepții. Dacă există conflicte, rezolvă-le manual; nu forța push.
+2. **Staging ≠ final.** Fișierele staged (dar necommise) sunt draft. Celălalt agent poate pusha între timp — dacă se întâmplă, faci `git reset HEAD .` și `git pull`, apoi reaplici modificările tale.
+3. **Nu schimba `compatibility` la skilluri existente fără să citești conținutul skillului.** Regulile sunt în secțiunea de mai sus. Dacă e neclar, lasă valoarea actuală și notează în commit message că e neclar.
+4. **`claude-code-only` nu este default.** Default-ul este `codex-and-claude-code` pentru orice skill text/instrucțiuni. Setezi `claude-code-only` doar când ai identificat explicit o dependență din lista din secțiunea anterioară.
+
+### Ce poate face fiecare
+
+| Acțiune | Claude Code | Codex |
+|---|---|---|
+| Adăugare skill nou | da | da |
+| Modificare skill existent | da | da |
+| Modificare README.md sau CONTRIBUTING.md | da | da |
+| Standardizare compatibility metadata | da | da, respectând protocolul hibrid |
+| Import din repo extern (MIT) | da | da, cu `source:` în frontmatter |
+
+### Autoritate pe conflict
+
+Dacă două versiuni ale aceluiași fișier sunt incompatibile, **Dan decide**. Niciunul dintre agenți nu suprascrie munca celuilalt fără confirmare explicită din partea lui Dan.
+
+Referința de autoritate pentru `compatibility` este acest fișier (CONTRIBUTING.md). Nu există ierarhie între Claude și Codex, ambii aplică aceleași reguli.
+
+### Format commit message
+
+```
+tip: descriere scurtă în română sau engleză
+
+# exemple:
+feat: adaugă skill linkedin-post-writer în writing/
+fix: corectează compatibility pentru biz-* skills cu skill-memory
+docs: actualizează protocolul de colaborare în CONTRIBUTING.md
+```
+
+Tipuri acceptate: `feat`, `fix`, `docs`, `refactor`, `chore`.
+
+---
+
 ## Cum trimiți un skill nou
 
-1. Fork la repo
+1. `git pull` la zi
 2. Creează folderul `[categorie]/[nume-skill]/`
 3. Adaugă `skill.md` cu frontmatter corect și `README.md`
-4. Verifică: `compatibility` setat, `name` unic în librărie, README cu instrucțiuni de instalare
-5. Deschide un Pull Request cu descrierea scurtă a ce face skillul
+4. Verifică: `compatibility` setat conform protocolului, `name` unic în librărie, README cu instrucțiuni de instalare
+5. Commit și push direct pe main
 
 ### Dacă imporți dintr-un repo extern
 
