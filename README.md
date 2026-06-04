@@ -1,8 +1,8 @@
 # BAAI Skills Library
 
-Librărie de skilluri pentru agenți AI, construită pentru membrii comunității Business Architect AI.
+Colecție de skilluri pentru agenți AI — Claude Code, Codex și alte platforme compatibile. Construită de și pentru membrii comunității Business Architect AI.
 
-Fiecare skill e un fișier `.md` cu instrucțiuni pe care agentul le citește și le urmează. Librăria acoperă mai multe platforme: **Claude Code**, **Codex** și altele compatibile cu formatul SKILL.md.
+Skilluri gata de instalat pentru strategie, marketing, operațiuni, dev, design și writing. Fiecare skill e un fișier `.md` pe care agentul îl citește ca instrucțiuni și îl urmează imediat.
 
 Există două tipuri de skilluri pentru Claude Code:
 - **Command skills** (cele mai multe): se copiază în `~/.claude/commands/`
