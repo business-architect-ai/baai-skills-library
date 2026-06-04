@@ -2,8 +2,6 @@
 
 Librăria este deschisă contribuțiilor din comunitatea Business Architect AI. Orice membru poate propune un skill nou, îmbunătăți unul existent sau adăuga suport pentru o platformă nouă.
 
-Pentru importuri/adaptări din surse externe, folosește protocolul oficial din [IMPORT_PROTOCOL.md](IMPORT_PROTOCOL.md).
-
 ---
 
 ## Structura unui skill

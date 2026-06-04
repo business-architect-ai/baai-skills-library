@@ -6,3 +6,6 @@ node_modules/
 
 *.log
 *.tmp
+
+# Private maintainer notes not published in the library.
+.private/
