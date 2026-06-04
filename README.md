@@ -103,6 +103,8 @@ for d in */*/; do [ -f "$d/skill.md" ] && cp "$d/skill.md" ~/.claude/commands/"$
 | Skill | Comandă | Ce face |
 |---|---|---|
 | [huashu-design](design/huashu-design/) | `/huashu-design` | Prototipuri și slide-uri HTML hi-fi, animații, design exploration |
+| [design-review](design/design-review/) ★ | `/design-review` | Review vizual: layout, tipografie, culori, consistență, responsive |
+| [ux-audit](design/ux-audit/) ★ | `/ux-audit` | Audit UX complet cu interacțiune reală, axe-core, performanță, verdict |
 
 ## Writing
 
