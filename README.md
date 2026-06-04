@@ -170,4 +170,4 @@ Cele mai multe skilluri includ un **Learning Engine** care salvează preferințe
 
 ---
 
-*Skillurile marcate cu sursă externă sunt importate cu permisiunea autorilor (MIT License).*
+*Skillurile marcate cu sursă externă sunt importate/adaptate din repo-uri cu licențe permisive, indicate în frontmatter și în README-ul fiecărui skill.*

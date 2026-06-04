@@ -3,7 +3,7 @@ name: "message-architecture"
 description: "Construieste arhitectura de mesaj pentru produs, oferta, campanie sau brand: audiente, insight, promisiune, proof points, piloni de mesaj, hook bank si CTA matrix. Foloseste cand userul cere messaging, pozitionare aplicata, mesaje pentru campanii, landing page, sales, LinkedIn, email sau aliniere intre canale."
 compatibility: codex-and-claude-code
 license: Apache-2.0
-source: https://github.com/iannuttall/gtm-agents
+source: https://github.com/iannuttall/gtm-agents (Apache-2.0 License)
 ---
 
 # /message-architecture - Arhitectura de mesaj

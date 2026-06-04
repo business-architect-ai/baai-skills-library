@@ -3,7 +3,7 @@ name: "gtm-strategy"
 description: "Creeaza o strategie go-to-market pentru lansarea unui produs, oferta, serviciu sau intrarea intr-o piata noua. Acopera ICP, segment initial, pozitionare, canale, messaging, KPI-uri, roadmap 30/60/90 zile si riscuri. Foloseste cand userul cere plan GTM, strategie de lansare, market entry sau product launch."
 compatibility: codex-and-claude-code
 license: MIT
-source: https://github.com/phuryn/pm-skills
+source: https://github.com/phuryn/pm-skills (MIT License)
 ---
 
 # /gtm-strategy — Strategie Go-To-Market
@@ -155,4 +155,3 @@ Si intreaba:
 ```text
 Vrei sa transform strategia intr-un plan de campanie, calendar de continut sau sales/outreach sequence?
 ```
-

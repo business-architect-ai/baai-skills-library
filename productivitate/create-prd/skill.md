@@ -3,7 +3,7 @@ name: "create-prd"
 description: "Creeaza un Product Requirements Document complet pentru un produs, feature sau initiativa: problema, obiective, segmente, value proposition, solutie, assumptions, release plan si criterii de succes. Foloseste cand userul cere PRD, specificatie produs, feature spec, document de produs sau handoff catre dev/design."
 compatibility: codex-and-claude-code
 license: MIT
-source: https://github.com/phuryn/pm-skills
+source: https://github.com/phuryn/pm-skills (MIT License)
 ---
 
 # /create-prd — Product Requirements Document complet
@@ -157,4 +157,3 @@ Si intreaba:
 ```text
 Vrei sa il transform acum intr-un plan de implementare, user stories sau backlog de sprint?
 ```
-

@@ -3,7 +3,7 @@ name: "skill-quality-audit"
 description: "Auditeaza un skill sau o librarie de skilluri pentru claritate, compatibilitate Codex/Claude Code, frontmatter, structura, trigger rules, output, riscuri, suprapuneri si instructiuni de instalare. Foloseste cand userul cere review de skill, standardizare librarie, verificare compatibility sau imbunatatirea unui SKILL.md."
 compatibility: codex-and-claude-code
 license: MIT
-source: https://github.com/dimillian/skills
+source: https://github.com/dimillian/skills (MIT License)
 ---
 
 # /skill-quality-audit - Audit de calitate pentru skilluri

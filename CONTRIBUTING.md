@@ -76,7 +76,7 @@ Dacă skillul are subfoldere `tools/`, `references/` sau `prompts/`, pune `compa
 
 ```yaml
 license: MIT
-source: https://github.com/autor/repo (MIT License)   # dacă e importat
+source: https://github.com/autor/repo (MIT License)   # dacă e importat/adaptat
 agent_targets:                                          # pentru skilluri Codex
   - codex
   - claude-code
@@ -145,7 +145,7 @@ Această librărie este întreținută în paralel de Claude Code și Codex. Amb
 | Modificare skill existent | da | da |
 | Modificare README.md sau CONTRIBUTING.md | da | da |
 | Standardizare compatibility metadata | da | da, respectând protocolul hibrid |
-| Import din repo extern (MIT) | da | da, cu `source:` în frontmatter |
+| Import din repo extern permisiv | da | da, cu `license:` și `source:` în frontmatter |
 
 ### Autoritate pe conflict
 
@@ -178,8 +178,8 @@ Tipuri acceptate: `feat`, `fix`, `docs`, `refactor`, `chore`.
 
 ### Dacă imporți dintr-un repo extern
 
-- Verifică licența (acceptăm MIT și licențe permisive similare)
-- Adaugă `source: https://github.com/autor/repo (MIT License)` în frontmatter
+- Verifică licența (acceptăm MIT, Apache-2.0, BSD și licențe permisive similare)
+- Adaugă `license:` și `source: https://github.com/autor/repo (License)` în frontmatter
 - Adaptează conținutul dacă e necesar (elimină referințe personale, căi hardcodate)
 
 ---
