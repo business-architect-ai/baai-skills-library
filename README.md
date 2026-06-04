@@ -67,6 +67,7 @@ done
 | [battlecard-system](strategie/battlecard-system/) | `/battlecard-system` | Battlecard competitiv pentru sales: diferențiatori, talk track, obiecții și win/loss signals |
 | [call-brief-framework](strategie/call-brief-framework/) | `/call-brief-framework` | Call brief pentru sales: obiectiv, stakeholderi, agenda, mesaje, întrebări și follow-up |
 | [objection-handling](strategie/objection-handling/) | `/objection-handling` | Răspunsuri la obiecții de vânzări cu LACE, proof mapping și adaptare pe canal |
+| [sales-playbook](strategie/sales-playbook/) | `/sales-playbook` | Playbook de vânzări cu ICP, proces, talk tracks, asseturi, rollout, coaching și KPI-uri |
 
 ## Marketing
 
