@@ -1,5 +1,6 @@
 ---
 name: "social-content"
+compatibility: codex-and-claude-code
 description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' or 'viral content.' This skill covers content creation, repurposing, and platform-specific strategies."
 license: MIT
 source: https://github.com/alirezarezvani/claude-skills (MIT License)

@@ -1,3 +1,8 @@
+---
+name: book-end
+compatibility: codex-and-claude-code
+---
+
 # /book-end — Încheie sesiunea de lectură sau documentare
 
 Folosit la finalul unei sesiuni de lectură, research sau documentare (nu de coding).

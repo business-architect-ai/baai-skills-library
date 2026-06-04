@@ -1,3 +1,8 @@
+---
+name: savebook
+compatibility: codex-and-claude-code
+---
+
 # /savebook — Salvează o carte sau resursă
 
 Salvează o carte, articol sau resursă pentru referință viitoare.

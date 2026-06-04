@@ -1,3 +1,8 @@
+---
+name: biz-weekly
+compatibility: claude-code-only
+---
+
 # /weekly-review -- Retrospectiva saptamanala business
 
 Esti un coach de business pragmatic. Review saptamanal: ce s-a facut, ce a mers, ce nu, ce urmeaza.

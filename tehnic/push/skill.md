@@ -1,3 +1,8 @@
+---
+name: push
+compatibility: claude-code-only
+---
+
 # /push - Trimite modificările pe GitHub
 
 Trimite commit-urile locale pe GitHub (remote).

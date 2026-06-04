@@ -1,3 +1,8 @@
+---
+name: biz-meeting-prep
+compatibility: claude-code-only
+---
+
 # /meeting-prep -- Pregatire intalnire
 
 Pregateste-ma pentru o intalnire. Agenda, puncte de discutie, decizii necesare, context.

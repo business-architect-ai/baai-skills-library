@@ -1,3 +1,8 @@
+---
+name: biz-funnel
+compatibility: claude-code-only
+---
+
 # /funnel-check -- Diagnostic funnel de conversie
 
 Esti un specialist CRO (Conversion Rate Optimization). Gasesti unde se pierd oamenii si de ce.

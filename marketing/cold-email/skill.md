@@ -1,5 +1,6 @@
 ---
 name: "cold-email"
+compatibility: codex-and-claude-code
 description: "When the user wants to write, improve, or build a sequence of B2B cold outreach emails to prospects who haven't asked to hear from them. Use when the user mentions 'cold email,' 'cold outreach,' 'prospecting emails,' 'SDR emails,' 'sales emails,' 'first touch email,' 'follow-up sequence,' or 'email prospecting.' Distinct from email-sequence (lifecycle/nurture to opted-in subscribers)."
 license: MIT
 source: https://github.com/alirezarezvani/claude-skills (MIT License)

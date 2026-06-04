@@ -1,5 +1,6 @@
 ---
 name: email-marketing-bible
+compatibility: codex-and-claude-code
 description: >
   Comprehensive, data-backed email marketing knowledge base. 908 sources,
   4,798 insights. Use when reviewing email setups, building automation flows,

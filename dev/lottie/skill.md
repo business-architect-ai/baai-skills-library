@@ -1,5 +1,6 @@
 ---
 name: lottie
+compatibility: codex-and-claude-code
 description: Lottie and dotLottie adapter patterns for HyperFrames. Use when embedding lottie-web JSON animations, .lottie files, @lottiefiles/dotlottie-web players, registering instances on window.__hfLottie, or making After Effects exports deterministic in HyperFrames.
 ---
 

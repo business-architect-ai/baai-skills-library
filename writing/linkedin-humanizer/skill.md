@@ -1,5 +1,6 @@
 ---
 name: linkedin-humanizer
+compatibility: codex-and-claude-code
 description: 'Scrub AI tells from any text draft OR audit a finished post against the 2026 algorithm heuristic checklist. Tier-based rewriter (forensic / strict / aesthetic / all) plus --mode audit for detection-only pass-fail review covering length, hook, CTA, format penalties, AI vocab. Triggers on "humanize", "de-AI", "review this draft", "audit before posting", "is this ready".'
 source: https://github.com/sergebulaev/linkedin-skills (MIT License)
 ---

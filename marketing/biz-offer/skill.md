@@ -54,6 +54,7 @@ STRUCTURA OFERTEI:
    "[propozitie clara cu un singur pas]"
 
 STACK VIZUAL (cum prezinti):
+compatibility: claude-code-only
 ---
 Tot ce primesti:
 [Element core]                    valoare [suma]

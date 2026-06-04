@@ -1,3 +1,8 @@
+---
+name: commit
+compatibility: claude-code-only
+---
+
 # /commit - Salvează modificările local
 
 Fă commit la modificările curente (salvare locală în git).

@@ -1,3 +1,8 @@
+---
+name: security-check
+compatibility: claude-code-only
+---
+
 # /security-check — Audit rapid de securitate
 
 Verificare rapidă de securitate pe proiectul curent.

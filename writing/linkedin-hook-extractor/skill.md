@@ -1,5 +1,6 @@
 ---
 name: linkedin-hook-extractor
+compatibility: codex-and-claude-code
 description: Reverse-engineer the hook formula from a viral LinkedIn post URL. Returns which of the 10 canonical 2026 formulas it uses (anaphora, R.I.P., year-pivot, time-anchor, self-proving, odd-money, paid-vs-free, curiosity-gap, contrarian, comment-gate), why it worked, and a blank template. Use to learn from a competitor's post, not to write your own (use linkedin-post-writer).
 source: https://github.com/sergebulaev/linkedin-skills (MIT License)
 ---

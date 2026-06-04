@@ -37,6 +37,7 @@ NEXT STEPS:
 - Ce trebuie pregatit: [ce]
 
 FOLLOW-UP EMAIL (draft):
+compatibility: claude-code-only
 ---
 Subiect: Actiuni din intalnirea [subiect] - [data]
 

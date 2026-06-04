@@ -1,3 +1,8 @@
+---
+name: ortografie-ro
+compatibility: codex-and-claude-code
+---
+
 # /ortografie-ro - Corectează ortografia română (sentence case)
 
 Aplică regulile de ortografie pentru limba română pe fișierele specificate.

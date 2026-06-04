@@ -3,7 +3,7 @@ name: ro-humanizer
 version: 1.1.0
 description: Elimină artefactele AI din text românesc. Self-contained, bazat pe date din 3.3M texte analizate (GPTZero), blader/humanizer v2.7.0 și cercetare NLP 2024-2025.
 license: MIT
-compatibility: claude-code
+compatibility: claude-code-only
 allowed-tools: Read
 ---
 

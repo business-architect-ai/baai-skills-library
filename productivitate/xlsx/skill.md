@@ -1,3 +1,8 @@
+---
+name: xlsx
+compatibility: codex-and-claude-code
+---
+
 # /xlsx — Analizează sau procesează fișiere Excel/CSV
 
 Lucrează cu fișiere de date structurate.

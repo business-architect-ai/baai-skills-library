@@ -1,5 +1,6 @@
 ---
 name: huashu-design
+compatibility: codex-and-claude-code
 description: HTML-based hi-fi design — prototypes, slides, animations, variant exploration, design direction consulting, expert review. **NOT for Facebook/Instagram ad creatives — use `image-ads` or `creative-pipeline` instead.** HTML is the tool, not the medium; embody different specialists per task (UX/animator/slide-designer/prototyper). Triggers (RO/EN/CN/RU): "fă prototip", "fă slides", "make prototype", "design demo", "HTML prototype", "做原型", "做幻灯片", "сделай прототип", "сделай слайды", "design exploration", "hi-fi mockup", "interactive demo", "UI mockup". Anti-triggers: "ad creative", "Facebook ad", "Instagram ad", "Meta Feed 1080×1080", "image ad" → redirect to `image-ads` / `creative-pipeline`.
 ---
 

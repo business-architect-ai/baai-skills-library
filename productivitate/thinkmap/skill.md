@@ -45,6 +45,7 @@ Actualizează `~/.claude/skill-memory/thinkmap.md`:
 - Userul poate cere oricând "ce ai învățat?" și primește raportul complet.
 - Zero pierdere. Nicio corecție nu se pierde. Nicio preferință nu se uită.
 
+compatibility: claude-code-only
 ---
 
 ## Moduri de funcționare

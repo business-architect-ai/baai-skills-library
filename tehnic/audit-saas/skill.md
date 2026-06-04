@@ -32,6 +32,7 @@ find . \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" \) -not
 grep -r "TODO\|FIXME\|HACK" --include="*.ts" --include="*.tsx" --include="*.js" . 2>/dev/null | grep -v node_modules | wc -l
 ```
 
+compatibility: codex-and-claude-code
 ---
 
 ## PASUL 2: Audit pe cele 10 criterii SaaS

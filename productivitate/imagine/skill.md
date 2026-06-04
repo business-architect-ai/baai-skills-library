@@ -1,3 +1,8 @@
+---
+name: imagine
+compatibility: claude-code-only
+---
+
 Generează o imagine folosind agentul image-generator.
 
 Promptul utilizatorului este: $ARGUMENTS

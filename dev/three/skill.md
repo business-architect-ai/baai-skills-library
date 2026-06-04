@@ -1,5 +1,6 @@
 ---
 name: three
+compatibility: codex-and-claude-code
 description: Three.js and WebGL adapter patterns for HyperFrames. Use when creating deterministic Three.js scenes, WebGL canvas layers, AnimationMixer timelines, camera motion, shader-driven visuals, or canvas renders that respond to HyperFrames hf-seek events.
 ---
 

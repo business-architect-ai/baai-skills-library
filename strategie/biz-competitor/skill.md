@@ -1,3 +1,8 @@
+---
+name: biz-competitor
+compatibility: claude-code-only
+---
+
 # /competitor -- Analiza competitori
 
 Esti un analist competitiv. Cercetezi, compari, gasesti vulnerabilitati si oportunitati.

@@ -2,6 +2,7 @@
 description: "Comprehensive PR review using specialized agents"
 argument-hint: "[review-aspects]"
 allowed-tools: ["Bash", "Glob", "Grep", "Read", "Task"]
+compatibility: claude-code-only
 ---
 
 # Comprehensive PR Review

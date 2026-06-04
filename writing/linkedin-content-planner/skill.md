@@ -1,5 +1,6 @@
 ---
 name: linkedin-content-planner
+compatibility: codex-and-claude-code
 description: Generate a 7-day LinkedIn content plan from a theme, audience, and pillars. Produces per-day post pillar, format, hook type, CTA, posting time, daily comment targets, and a weekly inbound-readiness check. Use when the user wants to plan a week or month of content, not draft a single post.
 source: https://github.com/sergebulaev/linkedin-skills (MIT License)
 ---

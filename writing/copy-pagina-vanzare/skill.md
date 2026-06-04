@@ -1,5 +1,6 @@
 ---
 name: copy-pagina-vanzare
+compatibility: codex-and-claude-code
 description: Ghid conversațional pentru generarea copyului complet al unei pagini de vânzare produs sau serviciu. Rulează înainte de atelier. Output: fișier copy-[produs].md gata de implementat în HTML.
 ---
 

@@ -1,3 +1,8 @@
+---
+name: plan
+compatibility: codex-and-claude-code
+---
+
 # /plan - Planifică un feature nou
 
 Când userul vrea să adauge un feature, ghidează-l prin aceste întrebări ÎNAINTE de a scrie cod.

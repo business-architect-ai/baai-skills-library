@@ -70,6 +70,7 @@ RAPID: /biz-decision (decizii) | /biz-pitch (prezentari) | /biz-copy (texte)
 ## 5. Directie
 
 ```
+compatibility: claude-code-only
 ---
 Buna dimineata! Cu ce incepem?
 ```

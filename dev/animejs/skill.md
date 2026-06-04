@@ -1,5 +1,6 @@
 ---
 name: animejs
+compatibility: codex-and-claude-code
 description: Anime.js adapter patterns for HyperFrames. Use when writing Anime.js animations or timelines inside HyperFrames compositions, registering animations on window.__hfAnime, making Anime.js seek-driven and deterministic, or translating Anime.js examples into render-safe HyperFrames HTML.
 ---
 
