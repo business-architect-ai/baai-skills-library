@@ -12,6 +12,8 @@ Unele skilluri noi sunt marcate cu compatibilitate explicită:
 - `compatibility: claude-code-only` — rulează doar în Claude Code
 - `compatibility: codex-and-claude-code` — pot fi instalate și în Codex, și în Claude Code
 
+Protocolul oficial pentru importuri noi este în [IMPORT_PROTOCOL.md](IMPORT_PROTOCOL.md).
+
 ## Instalare rapidă
 
 ### Claude Code
