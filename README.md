@@ -106,6 +106,9 @@ done
 | [xlsx](productivitate/xlsx/) | `/xlsx` | Analizează și procesează fișiere Excel sau CSV |
 | [plan](productivitate/plan/) | `/plan` | Planifică un feature nou înainte de a scrie cod |
 | [create-prd](productivitate/create-prd/) | `/create-prd` | Creează PRD complet pentru produs, feature sau inițiativă |
+| [research-users](productivitate/research-users/) | `/research-users` | Sintetizează research în personas, segmente comportamentale, journey map și recomandări |
+| [opportunity-solution-tree](productivitate/opportunity-solution-tree/) | `/opportunity-solution-tree` | Product discovery tree: outcome, oportunități, soluții și experimente |
+| [pre-mortem](productivitate/pre-mortem/) | `/pre-mortem` | Analiză de risc înainte de lansare: Tigers, Paper Tigers, Elephants și mitigări |
 | [ortografie-ro](productivitate/ortografie-ro/) | `/ortografie-ro` | Corectează capitalizarea în texte românești |
 | [savebook](productivitate/savebook/) | `/savebook` | Salvează o carte sau resursă în lista de lectură |
 | [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
