@@ -60,6 +60,7 @@ done
 | Skill | Comandă | Ce face |
 |---|---|---|
 | [biz-review](strategie/biz-review/) | `/biz-review` | Diagnostic complet de business pe 6 dimensiuni |
+| [biz-review-portable](strategie/biz-review-portable/) | `/biz-review-portable` | Diagnostic business portabil pentru Codex + Claude Code, fără skill-memory |
 | [biz-decision](strategie/biz-decision/) | `/biz-decision` | Framework structurat pentru decizii grele |
 | [biz-competitor](strategie/biz-competitor/) | `/biz-competitor` | Analiză competitivă cu hartă și recomandări |
 | [biz-pricing](strategie/biz-pricing/) | `/biz-pricing` | Review strategie de preț, benchmarking, recomandare |
@@ -74,8 +75,11 @@ done
 | Skill | Comandă | Ce face |
 |---|---|---|
 | [biz-campaign](marketing/biz-campaign/) | `/biz-campaign` | Planificare campanie cu KPIs și plan de contingență |
+| [biz-campaign-portable](marketing/biz-campaign-portable/) | `/biz-campaign-portable` | Plan campanie portabil pentru Codex + Claude Code, fără skill-memory |
 | [biz-copy](marketing/biz-copy/) | `/biz-copy` | Copywriting pe vocea brandului pentru orice canal |
+| [biz-copy-portable](marketing/biz-copy-portable/) | `/biz-copy-portable` | Copywriting portabil pe canal și audiență, fără skill-memory |
 | [biz-customer](marketing/biz-customer/) | `/biz-customer` | Construiește avatar client detaliat din date reale |
+| [biz-customer-portable](marketing/biz-customer-portable/) | `/biz-customer-portable` | Avatar client portabil cu limbaj, trigger, obiecții și canale |
 | [biz-funnel](marketing/biz-funnel/) | `/biz-funnel` | Diagnostic funnel, identifică scurgeri și fix-uri |
 | [biz-offer](marketing/biz-offer/) | `/biz-offer` | Construiește sau revizuiește oferta comercială |
 | [gtm-strategy](marketing/gtm-strategy/) | `/gtm-strategy` | Strategie go-to-market cu ICP, poziționare, canale, KPI-uri și roadmap 30/60/90 |
@@ -176,7 +180,7 @@ mkdir -p ~/.claude/skills/[nume-skill]
 cp [categorie]/[nume-skill]/skill.md ~/.claude/skills/[nume-skill]/SKILL.md
 ```
 
-Cele mai multe skilluri includ un **Learning Engine** care salvează preferințele tale în `~/.claude/skill-memory/`. La a doua rulare, skillul știe deja contextul tău și nu mai întreabă de la zero.
+Unele skilluri Claude Code vechi includ un **Learning Engine** care salvează preferințele tale în `~/.claude/skill-memory/`. Variantele marcate `portable` nu folosesc această memorie și sunt compatibile Codex + Claude Code.
 
 ---
 
