@@ -155,6 +155,7 @@ done
 |---|---|---|
 | [ro-humanizer](writing/ro-humanizer/) | `/ro-humanizer` | Elimină artefactele AI din text românesc în 4 etape |
 | [humanizer](writing/humanizer/) | `/humanizer` | Elimină artefactele AI din text englezesc (30 de pattern-uri) |
+| [arhitect-pagini-vanzare](writing/arhitect-pagini-vanzare/) | `/arhitect-pagini-vanzare` | Diagnostichează tipul de pagină de vânzare și construiește copy secțiune cu secțiune |
 | [copy-pagina-vanzare](writing/copy-pagina-vanzare/) | `/copy-pagina-vanzare` | Generează copy complet pentru pagina de vânzare prin 9 întrebări |
 | [linkedin-post-writer](writing/linkedin-post-writer/) ★ | `/linkedin-post-writer` | Scrie postări LinkedIn cu cele 10 formule de hook 2026 |
 | [linkedin-hook-extractor](writing/linkedin-hook-extractor/) ★ | `/linkedin-hook-extractor` | Demontează hookul oricărei postări virale și generează template |
