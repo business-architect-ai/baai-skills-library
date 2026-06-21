@@ -1,0 +1,7 @@
+interface:
+  display_name: "Web Section Composer"
+  short_description: "Compune secțiuni web clare, estetice și eficiente"
+  default_prompt: "Use $web-section-composer to design, improve, or audit the sections on this web page for clarity, visual hierarchy, space efficiency, responsive behavior, and media use."
+
+policy:
+  allow_implicit_invocation: true

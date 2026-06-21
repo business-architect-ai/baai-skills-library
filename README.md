@@ -141,6 +141,7 @@ done
 | [lottie](dev/lottie/) | `/lottie` | Integrare și control animații Lottie (JSON din After Effects) |
 | [three](dev/three/) | `/three` | Grafică 3D în browser cu Three.js |
 | [imagini-web-lp](dev/imagini-web-lp/) ★ | `/imagini-web-lp` | Reguli imagini și video pentru landing pages: AVIF/WebP, lazy loading, Hero/LCP, video autoplay și audit HTML |
+| [web-section-composer](dev/web-section-composer/) ★ | `/web-section-composer` | Compune și auditează secțiuni web după job, ierarhie vizuală, densitate, responsive și eficiență de spațiu |
 
 ## Design
 
