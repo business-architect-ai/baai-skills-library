@@ -140,6 +140,7 @@ done
 | [waapi](dev/waapi/) | `/waapi` | Animații native cu Web Animations API |
 | [lottie](dev/lottie/) | `/lottie` | Integrare și control animații Lottie (JSON din After Effects) |
 | [three](dev/three/) | `/three` | Grafică 3D în browser cu Three.js |
+| [imagini-web-lp](dev/imagini-web-lp/) ★ | `/imagini-web-lp` | Reguli imagini și video pentru landing pages: AVIF/WebP, lazy loading, Hero/LCP, video autoplay și audit HTML |
 
 ## Design
 

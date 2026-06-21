@@ -27,4 +27,17 @@ pe orice landing page HTML. Acoperă formate, dimensiuni, lazy loading, video au
 ```bash
 mkdir -p ~/.claude/skills/imagini-web-lp
 cp skill.md ~/.claude/skills/imagini-web-lp/SKILL.md
+cp -R scripts ~/.claude/skills/imagini-web-lp/
+cp -R agents ~/.claude/skills/imagini-web-lp/
+chmod +x ~/.claude/skills/imagini-web-lp/scripts/audit-media-html.mjs
 ```
+
+## Audit automat
+
+După instalare, poți verifica un fișier HTML static cu:
+
+```bash
+node ~/.claude/skills/imagini-web-lp/scripts/audit-media-html.mjs path/to/page.html
+```
+
+Scriptul verifică atributele media de bază: `width`, `height`, `alt`, lazy loading corect, `fetchpriority` pe Hero/LCP, surse AVIF/WebP în `<picture>`, video autoplay complet și meta tags sociale.

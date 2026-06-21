@@ -1,0 +1,7 @@
+interface:
+  display_name: "Imagini Web LP"
+  short_description: "Optimizează media pentru landing pages"
+  default_prompt: "Use $imagini-web-lp to audit and optimize the images, videos, and social preview media on this landing page."
+
+policy:
+  allow_implicit_invocation: true
