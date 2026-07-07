@@ -18,7 +18,7 @@ Unele skilluri noi sunt marcate cu compatibilitate explicită:
 
 ```bash
 # Command skill (un singur skill, exemplu)
-cp strategie/biz-review/skill.md ~/.claude/commands/biz-review.md
+cp strategie/battlecard-system/skill.md ~/.claude/commands/battlecard-system.md
 
 # Plugin skill (exemplu)
 mkdir -p ~/.claude/skills/linkedin-post-writer
@@ -57,12 +57,8 @@ done
 
 | Skill | Comandă | Ce face |
 |---|---|---|
-| [biz-review](strategie/biz-review/) | `/biz-review` | Diagnostic complet de business pe 6 dimensiuni |
+| [biz-toolkit](strategie/biz-toolkit/) ★ | `/biz-toolkit` | Pachet complet: 15 module de consultanță (diagnostic, preț, ofertă, copy, avatar, competitori, funnel, campanie, decizie, procese, pitch, ședințe, retrospectivă, ritual) cu learning engine și context de afacere comun. Reunește comenzile individuale biz-* |
 | [biz-review-portable](strategie/biz-review-portable/) | `/biz-review-portable` | Diagnostic business portabil pentru Codex + Claude Code, fără skill-memory |
-| [biz-decision](strategie/biz-decision/) | `/biz-decision` | Framework structurat pentru decizii grele |
-| [biz-competitor](strategie/biz-competitor/) | `/biz-competitor` | Analiză competitivă cu hartă și recomandări |
-| [biz-pricing](strategie/biz-pricing/) | `/biz-pricing` | Review strategie de preț, benchmarking, recomandare |
-| [biz-pitch](strategie/biz-pitch/) | `/biz-pitch` | Review și rescriere pitch sau prezentare |
 | [battlecard-system](strategie/battlecard-system/) | `/battlecard-system` | Battlecard competitiv pentru sales: diferențiatori, talk track, obiecții și win/loss signals |
 | [call-brief-framework](strategie/call-brief-framework/) | `/call-brief-framework` | Call brief pentru sales: obiectiv, stakeholderi, agenda, mesaje, întrebări și follow-up |
 | [objection-handling](strategie/objection-handling/) | `/objection-handling` | Răspunsuri la obiecții de vânzări cu LACE, proof mapping și adaptare pe canal |
@@ -72,14 +68,9 @@ done
 
 | Skill | Comandă | Ce face |
 |---|---|---|
-| [biz-campaign](marketing/biz-campaign/) | `/biz-campaign` | Planificare campanie cu KPIs și plan de contingență |
 | [biz-campaign-portable](marketing/biz-campaign-portable/) | `/biz-campaign-portable` | Plan campanie portabil pentru Codex + Claude Code, fără skill-memory |
-| [biz-copy](marketing/biz-copy/) | `/biz-copy` | Copywriting pe vocea brandului pentru orice canal |
 | [biz-copy-portable](marketing/biz-copy-portable/) | `/biz-copy-portable` | Copywriting portabil pe canal și audiență, fără skill-memory |
-| [biz-customer](marketing/biz-customer/) | `/biz-customer` | Construiește avatar client detaliat din date reale |
 | [biz-customer-portable](marketing/biz-customer-portable/) | `/biz-customer-portable` | Avatar client portabil cu limbaj, trigger, obiecții și canale |
-| [biz-funnel](marketing/biz-funnel/) | `/biz-funnel` | Diagnostic funnel, identifică scurgeri și fix-uri |
-| [biz-offer](marketing/biz-offer/) | `/biz-offer` | Construiește sau revizuiește oferta comercială |
 | [gtm-strategy](marketing/gtm-strategy/) | `/gtm-strategy` | Strategie go-to-market cu ICP, poziționare, canale, KPI-uri și roadmap 30/60/90 |
 | [message-architecture](marketing/message-architecture/) | `/message-architecture` | Arhitectură de mesaj cu public, promisiune, proof points, hook bank și CTA matrix |
 | [deliverability-ops](marketing/deliverability-ops/) | `/deliverability-ops` | Diagnostic email deliverability: reputație, SPF/DKIM/DMARC, list health, warmup și compliance |
@@ -89,16 +80,6 @@ done
 | [social-content](marketing/social-content/) ★ | `/social-content` | Conținut social media pe orice platformă cu sistem de repurposing |
 | [x-twitter-growth](marketing/x-twitter-growth/) ★ | `/x-twitter-growth` | Creștere X/Twitter: algoritm 2026, thread-uri, strategie reply |
 | [email-marketing-bible](marketing/email-marketing-bible/) ★ | `/email-marketing-bible` | Referință completă email marketing: 908 surse, 19 industrii |
-
-## Operațiuni
-
-| Skill | Comandă | Ce face |
-|---|---|---|
-| [biz-ops](operatiuni/biz-ops/) | `/biz-ops` | Audit procese, identifică bottleneck-uri și automatizări |
-| [biz-meeting-prep](operatiuni/biz-meeting-prep/) | `/biz-meeting-prep` | Pregătire întâlnire cu agendă și worst case |
-| [biz-meeting-notes](operatiuni/biz-meeting-notes/) | `/biz-meeting-notes` | Transformă note brute în acțiuni cu responsabili și deadlines |
-| [biz-weekly](operatiuni/biz-weekly/) | `/biz-weekly` | Retrospectivă săptămânală cu wins, blocaje și priorități |
-| [biz-day](operatiuni/biz-day/) | `/biz-day` | Ritual de dimineață: priorități, KPIs, follow-ups |
 
 ## Productivitate
 
