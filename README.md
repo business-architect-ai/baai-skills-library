@@ -131,6 +131,7 @@ done
 | [huashu-design](design/huashu-design/) | `/huashu-design` | Prototipuri și slide-uri HTML hi-fi, animații, design exploration |
 | [design-review](design/design-review/) ★ | `/design-review` | Review vizual: layout, tipografie, culori, consistență, responsive |
 | [ux-audit](design/ux-audit/) ★ | `/ux-audit` | Audit UX complet cu interacțiune reală, axe-core, performanță, verdict |
+| [baai-design-toolkit](design/baai-design-toolkit/) | `/baai-design-toolkit` | Alegi și folosești unelte de design cu AI (shadcn/ui, 21st.dev, Open Design), cu router de decizie și comenzi de instalare |
 
 ## Writing
 
