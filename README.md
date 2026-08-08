@@ -96,6 +96,7 @@ done
 | [savebook](productivitate/savebook/) | `/savebook` | Salvează o carte sau resursă în lista de lectură |
 | [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
 | [imagine](productivitate/imagine/) | `/imagine` | Generează o imagine dintr-un prompt |
+| [opinion](productivitate/opinion/) ★ | `/opinion` | A doua părere pe o decizie grea, de la două familii de modele diferite, plus sinteza contradicțiilor |
 
 ## Tehnic
 
