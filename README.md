@@ -97,6 +97,7 @@ done
 | [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
 | [imagine](productivitate/imagine/) | `/imagine` | Generează o imagine dintr-un prompt |
 | [opinion](productivitate/opinion/) ★ | `/opinion` | A doua părere pe o decizie grea, de la două familii de modele diferite, plus sinteza contradicțiilor |
+| [transcript-to-tool-miner](productivitate/transcript-to-tool-miner/) ★ | `/transcript-to-tool-miner` | Extrage din transcripturi instrumente, principii, workflow-uri și evaluatoare reutilizabile, cu dovezi și scoring |
 
 ## Tehnic
 
