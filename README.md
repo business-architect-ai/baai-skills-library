@@ -110,6 +110,7 @@ done
 | [security-check](tehnic/security-check/) | `/security-check` | Audit rapid de securitate: secrets expuse, vulnerabilități npm |
 | [site-audit-agent](tehnic/site-audit-agent/) ★ | `/site-audit-agent` | Audit complet site: SEO, accessibility, performance, security, design tokens, prompt remediere Claude Code |
 | [skill-quality-audit](tehnic/skill-quality-audit/) | `/skill-quality-audit` | Audit de calitate pentru skilluri: compatibilitate, structură, trigger rules, riscuri și suprapuneri |
+| [m2c1](tehnic/m2c1/) ★ | `/m2c1` | Orchestrare autonomă în 12 faze, de la idee dezordonată la aplicație construită, testată și publicată. Cere Playwright MCP |
 
 ## Dev
 
