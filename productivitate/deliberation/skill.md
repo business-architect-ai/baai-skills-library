@@ -1,10 +1,11 @@
 ---
 name: "deliberation"
-compatibility: codex-and-claude-code
 description: "Use when a user needs a clear recommendation, a critical review, or a synthesis of conflicting analyses, especially for consequential choices, uncertain evidence, multiple perspectives, multiple models, or representative files in a task folder."
-agent_targets:
-  - codex
-  - claude-code
+metadata:
+  compatibility: codex-and-claude-code
+  agent_targets:
+    - codex
+    - claude-code
 ---
 
 # Deliberation
