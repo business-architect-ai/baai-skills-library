@@ -97,6 +97,7 @@ done
 | [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
 | [imagine](productivitate/imagine/) | `/imagine` | Generează o imagine dintr-un prompt |
 | [opinion](productivitate/opinion/) ★ | `/opinion` | A doua părere pe o decizie grea, de la două familii de modele diferite, plus sinteza contradicțiilor |
+| [deliberation](productivitate/deliberation/) ★ | `/deliberation` | Recomandări, review și sinteză bazate pe dovezi, cu mod single-model sau multimodel, context din fișiere și validare deterministă |
 
 ## Tehnic
 
