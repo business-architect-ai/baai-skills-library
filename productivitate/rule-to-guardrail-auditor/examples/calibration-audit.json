@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "r2g-20260905-calibration",
+  "created_at": "2026-09-05T10:15:00+03:00",
+  "mode": "consultative",
+  "target_platforms": ["codex", "claude"],
+  "sources": [
+    {
+      "id": "S001",
+      "kind": "file",
+      "locator": "AGENTS.md",
+      "status": "processed",
+      "note": "Explicitly supplied project instructions."
+    },
+    {
+      "id": "S002",
+      "kind": "file",
+      "locator": "CLAUDE.md",
+      "status": "processed",
+      "note": "Explicitly supplied runtime instructions."
+    }
+  ],
+  "instructions": [
+    {
+      "id": "R001",
+      "source_id": "S001",
+      "location": "line 10",
+      "original": "Run tests before declaring completion.",
+      "normalized": "Require the configured test command to pass before declaring completion.",
+      "disposition": "CONTROL",
+      "confidence": "high",
+      "rationale": "The completion event and command exit status are observable.",
+      "details": {
+        "trigger": "Before an agent declares the task complete.",
+        "condition": "The configured test command exits with status 0.",
+        "enforcement_point": "Completion gate or project verification script.",
+        "allow_behavior": "Permit completion when the command succeeds.",
+        "failure_behavior": "Block completion and report the failing command.",
+        "positive_test": "A fixture whose test command exits 0 permits completion.",
+        "negative_test": "A fixture whose test command exits nonzero blocks completion.",
+        "limitations": "The command only covers the tests it actually runs.",
+        "control_status": "proposed"
+      },
+      "platform_feasibility": [
+        {
+          "platform": "codex",
+          "feasibility": "unverified",
+          "mechanism": "Needs a verified pre-completion mechanism or project script.",
+          "evidence": "Current platform documentation was not inspected in this fixture."
+        },
+        {
+          "platform": "claude",
+          "feasibility": "unverified",
+          "mechanism": "Needs a verified pre-completion hook or project script.",
+          "evidence": "Current platform documentation was not inspected in this fixture."
+        }
+      ]
+    },
+    {
+      "id": "R002",
+      "source_id": "S002",
+      "location": "line 4",
+      "original": "Do not read .env.",
+      "normalized": "Prevent access to .env and prefer .env.example for public structure.",
+      "disposition": "CONTROL",
+      "confidence": "high",
+      "rationale": "A path access attempt is observable and can be blocked by policy or tooling.",
+      "details": {
+        "trigger": "Before a tool reads a file path.",
+        "condition": "The resolved target is not a forbidden secret-bearing path.",
+        "enforcement_point": "Filesystem permission boundary, tool policy, or wrapper.",
+        "allow_behavior": "Permit reads of approved non-secret files such as .env.example.",
+        "failure_behavior": "Block the read and identify the forbidden path category without exposing content.",
+        "positive_test": "Reading .env.example is allowed within scope.",
+        "negative_test": "Reading .env is blocked before content is returned.",
+        "limitations": "Secret filenames vary and policy must avoid false confidence.",
+        "control_status": "proposed"
+      },
+      "platform_feasibility": [
+        {
+          "platform": "codex",
+          "feasibility": "unverified",
+          "mechanism": "Map to verified sandbox, permission, or wrapper capabilities.",
+          "evidence": "No current platform evidence supplied."
+        },
+        {
+          "platform": "claude",
+          "feasibility": "unverified",
+          "mechanism": "Map to verified permission, hook, or wrapper capabilities.",
+          "evidence": "No current platform evidence supplied."
+        }
+      ]
+    },
+    {
+      "id": "R003",
+      "source_id": "S001",
+      "location": "line 16",
+      "original": "Use integers for money.",
+      "normalized": "Represent monetary values as integer minor units.",
+      "disposition": "RULE",
+      "confidence": "high",
+      "rationale": "This is a domain design constraint whose application requires contextual judgment.",
+      "details": {
+        "retained_instruction": "Represent monetary values as integer minor units.",
+        "judgment_required": "Identify monetary values, currencies, and conversion boundaries.",
+        "anti_pattern": "Persisting money as binary floating point.",
+        "review_question": "Are persisted monetary amounts represented in integer minor units?"
+      },
+      "platform_feasibility": [
+        {
+          "platform": "codex",
+          "feasibility": "advisory_only",
+          "mechanism": "Retain as a domain instruction and review data contracts.",
+          "evidence": "No universal deterministic event covers domain modeling judgment."
+        },
+        {
+          "platform": "claude",
+          "feasibility": "advisory_only",
+          "mechanism": "Retain as a domain instruction and review data contracts.",
+          "evidence": "No universal deterministic event covers domain modeling judgment."
+        }
+      ]
+    },
+    {
+      "id": "R004",
+      "source_id": "S001",
+      "location": "line 20",
+      "original": "Write clean code.",
+      "normalized": "Write clean code.",
+      "disposition": "ELIMINATE",
+      "confidence": "high",
+      "rationale": "The phrase has no operational definition or observable acceptance criterion.",
+      "details": {
+        "reason": "vague",
+        "replacement": "Replace with named formatter, linter, complexity, or review criteria if those constraints are intended.",
+        "related_instruction_ids": []
+      },
+      "platform_feasibility": [
+        {
+          "platform": "codex",
+          "feasibility": "advisory_only",
+          "mechanism": "Remove the vague wording or replace it with concrete criteria.",
+          "evidence": "The disposition is independent of runtime."
+        },
+        {
+          "platform": "claude",
+          "feasibility": "advisory_only",
+          "mechanism": "Remove the vague wording or replace it with concrete criteria.",
+          "evidence": "The disposition is independent of runtime."
+        }
+      ]
+    },
+    {
+      "id": "R005",
+      "source_id": "S002",
+      "location": "line 12",
+      "original": "Publish after completion.",
+      "normalized": "Request approval before publishing a completed artifact.",
+      "disposition": "HUMAN_DECISION",
+      "confidence": "high",
+      "rationale": "Publication is an external effect and requires explicit authority.",
+      "details": {
+        "decision_owner": "project owner",
+        "approval_moment": "After validation evidence is shown and before any publication command or API call.",
+        "information_required": "Target, visibility, version, validation result, and rollback implications.",
+        "prohibited_before_approval": "Do not publish, deploy, push a release, or send the artifact externally.",
+        "retained_risk": "Unintended public exposure or release of an unapproved artifact."
+      },
+      "platform_feasibility": [
+        {
+          "platform": "codex",
+          "feasibility": "advisory_only",
+          "mechanism": "Retain explicit human approval before the external action.",
+          "evidence": "Platform capability cannot supply user authority."
+        },
+        {
+          "platform": "claude",
+          "feasibility": "advisory_only",
+          "mechanism": "Retain explicit human approval before the external action.",
+          "evidence": "Platform capability cannot supply user authority."
+        }
+      ]
+    }
+  ],
+  "contradictions": [],
+  "ambiguities": [],
+  "coverage": {
+    "sources_total": 2,
+    "sources_processed": 2,
+    "sources_skipped": 0,
+    "sources_unreadable": 0,
+    "sources_incomplete": 0,
+    "instructions_total": 5,
+    "dispositions": {
+      "RULE": 1,
+      "CONTROL": 2,
+      "ELIMINATE": 1,
+      "HUMAN_DECISION": 1
+    }
+  },
+  "attestation": {
+    "modified_sources": false,
+    "installed_controls": false,
+    "executed_tests": false,
+    "accessed_secrets": false,
+    "published": false,
+    "deployed": false,
+    "sent_messages": false,
+    "statement": "No audited source, control, hook, configuration, or permission was modified."
+  }
+}

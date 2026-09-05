@@ -92,6 +92,7 @@ done
 | [research-users](productivitate/research-users/) | `/research-users` | Sintetizează research în personas, segmente comportamentale, journey map și recomandări |
 | [opportunity-solution-tree](productivitate/opportunity-solution-tree/) | `/opportunity-solution-tree` | Product discovery tree: outcome, oportunități, soluții și experimente |
 | [pre-mortem](productivitate/pre-mortem/) | `/pre-mortem` | Analiză de risc înainte de lansare: Tigers, Paper Tigers, Elephants și mitigări |
+| [rule-to-guardrail-auditor](productivitate/rule-to-guardrail-auditor/) ★ | `/rule-to-guardrail-auditor` | Auditează regulile agenților: păstrează judecata, propune controale, elimină zgomotul și protejează deciziile umane |
 | [ortografie-ro](productivitate/ortografie-ro/) | `/ortografie-ro` | Corectează capitalizarea în texte românești |
 | [savebook](productivitate/savebook/) | `/savebook` | Salvează o carte sau resursă în lista de lectură |
 | [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
