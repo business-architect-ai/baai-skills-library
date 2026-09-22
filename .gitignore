@@ -9,3 +9,21 @@ node_modules/
 
 # Private maintainer notes not published in the library.
 .private/
+
+# Repo public: nicio credentiala nu intra aici, niciodata.
+.env
+.env.*
+!.env.example
+
+# Context generat automat de claude-mem: contine istoricul intern de lucru,
+# nu are ce cauta intr-un repo public.
+AGENTS.md
+
+# Reziduuri de lucru.
+__pycache__/
+.venv/
+venv/
+
+# Biblioteca contine DOAR skilluri (folder cu skill.md + README.md).
+# Proiectele, clonele de repo si materialele de lucru stau in
+# ~/PROIECTE AI/<nume-proiect>/, nu aici.
