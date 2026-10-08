@@ -57,8 +57,9 @@ Află, întrebând doar ce lipsește (o întrebare pe mesaj):
 
 Înainte să pornești o variantă care nu e standard, spune-i omului câte rulări înseamnă
 (persona × repetări) și o estimare grosieră de tokeni, apoi **așteaptă confirmarea**. Reper
-măsurat: o persona pe un ghid de ~150 de rânduri a consumat ~90.000 de tokeni. Un text lung
-sau un site live, unde fiecare pagină deschisă intră în context, costă mai mult. Spune că e o
+măsurat: o persona pe un ghid de ~150 de rânduri a consumat ~90.000 de tokeni, iar pe o
+aplicație web mare, explorată 30-40 de pași, 100.000-140.000 de tokeni și ~2 minute. Un site
+cu mult conținut pe pagină costă mai mult. Spune că e o
 estimare, nu o promisiune. Pe `web`, adaugă și timpul: rulările merg una după alta.
 
 ## Pasul 2. Persona

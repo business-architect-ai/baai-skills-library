@@ -42,7 +42,7 @@ verifici frecările grave cu 3-5 oameni reali.
 
 Panelul lărgit și repetările se pot combina. Înainte să pornească o variantă care nu e
 standard, skillul îți spune câte rulări înseamnă și o estimare de tokeni, apoi așteaptă
-confirmarea. Reper: o persona pe un ghid de ~150 de rânduri consumă în jur de 90.000 de tokeni.
+confirmarea. Reper măsurat: în jur de 90.000 de tokeni pe persona pentru un ghid de ~150 de rânduri și 100.000-140.000 pentru o aplicație web mare.
 Persona simulate vin din același model, deci câștigul de la persona în plus scade repede.
 
 ## Chestionarul, după tipul materialului
