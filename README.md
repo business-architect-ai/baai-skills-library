@@ -137,6 +137,7 @@ done
 | [design-review](design/design-review/) ★ | `/design-review` | Review vizual: layout, tipografie, culori, consistență, responsive |
 | [ux-audit](design/ux-audit/) ★ | `/ux-audit` | Audit UX complet cu interacțiune reală, axe-core, performanță, verdict |
 | [baai-design-toolkit](design/baai-design-toolkit/) | `/baai-design-toolkit` | Alegi și folosești unelte de design cu AI (shadcn/ui, 21st.dev, Open Design), cu router de decizie și comenzi de instalare |
+| [sus-panel](design/sus-panel/) | `/sus-panel` | Test de uzabilitate cu 3-5 utilizatori simulați, construiți dintr-un onboarding despre publicul tău; frecări ordonate după gravitate și scor SUS calculat de script |
 
 ## Writing
 
