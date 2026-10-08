@@ -16,7 +16,7 @@ Severitate: **5** = blocaj (n-a putut sau n-a vrut să continue), **4** = major�
 # SUS panel: <ce s-a testat>
 **Material:** <URL / fișier> · **Tip:** <interfață / ghid / text de citit> · **Suprafață:** <web / local / text / capturi> · **Data:** <AAAA-LL-ZZ>
 **Sarcina dată:** <cu vorbele din briefing>
-**Persona:** <nume 1>, <nume 2>, <nume 3> (detalii în `persone/`)
+**Persona:** <nume 1>, <nume 2>, <nume 3> (detalii în `persone/`) · **Panel:** <standard / lărgit> · **Rulări pe persona:** <1 / 2 / 3>
 
 ## Pe scurt
 <3-4 propoziții: ce spune testul ăsta autorului. Cea mai importantă frecare, câte persona au
@@ -32,6 +32,9 @@ ajuns la capăt, scorul (dacă există) cu avertismentul lui.>
 
 Împrăștiere: <abaterea standard și intervalul, din script>.
 
+<La repetări: copiezi tabelul cu rulări din script și numești persona cu scor instabil.
+Scorul lor nu intră în concluzie.>
+
 > Scorul e orientativ. Persona sunt simulate de un model de limbaj, care tinde să dea scoruri
 > mai mari decât oamenii reali, mai ales pentru un public puțin tehnic. Valoarea testului stă
 > în frecările de mai jos, nu în cifră. Media de referință pentru SUS e 68.
@@ -42,6 +45,9 @@ fiecare persona. Unde se potrivește, unde deviază, unde s-au oprit din citit.>
 
 ## Frecări găsite de mai multe persona (încredere mai mare)
 - **[S#]** <unde> : <ce s-a întâmplat, în termeni de analiză>. *(<persona care au atins-o>)*
+
+## Frecări întâmplătoare (doar la repetări)
+- **[S#]** <unde> : <ce s-a întâmplat>. *(<persona>, apărută în <1> din <3> rulări)*
 
 ## Frecări găsite de o singură persona
 - **[S#]** <unde> : <ce s-a întâmplat>. *(<persona>, <de ce contează pentru profilul ei>)*

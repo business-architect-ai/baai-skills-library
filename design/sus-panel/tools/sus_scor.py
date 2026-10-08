@@ -4,6 +4,11 @@
 Intrare: un fișier JSON cu o listă de obiecte, sau un obiect pe linie:
     {"persona": "Ana", "sus": [4, 2, 4, 1, 4, 2, 5, 2, 4, 1]}
 
+Repetări: aceeași persona poate apărea de mai multe ori, câte o linie pe
+rulare. Scriptul grupează rulările după numele persona și arată cât de stabil
+e scorul fiecăreia. Media panelului se face pe mediile persona, ca fiecare
+persona să conteze la fel, indiferent de câte ori a rulat.
+
 Formula (Brooke, 1986):
     afirmațiile impare (1, 3, 5, 7, 9): răspuns - 1
     afirmațiile pare (2, 4, 6, 8, 10):  5 - răspuns
@@ -26,6 +31,9 @@ SCALA_NOTE = [
     (71.1, "C+"), (65.0, "C"), (62.7, "C-"),
     (51.7, "D"), (0.0, "F"),
 ]
+
+# Peste atâtea puncte între rulările aceleiași persona, scorul ei e instabil.
+PRAG_INSTABIL = 15.0
 
 
 def nota(scor):
@@ -72,6 +80,10 @@ def citeste(cale):
     return [json.loads(linie) for linie in continut.splitlines() if linie.strip()]
 
 
+def fmt(x):
+    return f"{x:.1f}"
+
+
 def main():
     if len(sys.argv) != 2:
         print(__doc__.strip())
@@ -82,7 +94,8 @@ def main():
         print(f"Eroare la citire: {e}", file=sys.stderr)
         return 1
 
-    rezultate, avertismente, erori = [], [], []
+    pe_persona = {}  # nume -> listă de scoruri, în ordinea rulărilor
+    avertismente, erori = [], []
     for poz, intrare in enumerate(intrari, start=1):
         try:
             persona, sus, av = valideaza(intrare, poz)
@@ -90,27 +103,49 @@ def main():
             erori.append(str(e))
             continue
         avertismente.extend(av)
-        rezultate.append((persona, scor_sus(sus)))
+        pe_persona.setdefault(persona, []).append(scor_sus(sus))
 
     for e in erori:
         print(f"RESPINS: {e}", file=sys.stderr)
-    if not rezultate:
+    if not pe_persona:
         print("Niciun set de răspunsuri valid.", file=sys.stderr)
         return 1
 
-    print("| Persona | Scor | Notă |")
-    print("|---|---|---|")
-    for persona, scor in rezultate:
-        print(f"| {persona} | {scor:.1f} | {nota(scor)} |")
-    scoruri = [s for _, s in rezultate]
-    media = statistics.mean(scoruri)
-    print(f"| **Media** | **{media:.1f}** | **{nota(media)}** |")
-    print()
-    if len(scoruri) > 1:
-        print(f"Împrăștiere: abatere standard {statistics.stdev(scoruri):.1f}, "
-              f"interval {min(scoruri):.1f} - {max(scoruri):.1f}, {len(scoruri)} persona.")
+    cu_repetari = any(len(s) > 1 for s in pe_persona.values())
+    medii = {p: statistics.mean(s) for p, s in pe_persona.items()}
+    media = statistics.mean(medii.values())
+
+    if cu_repetari:
+        print("| Persona | Rulări | Scoruri | Medie | Interval | Notă |")
+        print("|---|---|---|---|---|---|")
+        for p, scoruri in pe_persona.items():
+            interval = max(scoruri) - min(scoruri)
+            print(f"| {p} | {len(scoruri)} | {', '.join(fmt(s) for s in scoruri)} | "
+                  f"{fmt(medii[p])} | {fmt(interval)} | {nota(medii[p])} |")
+            if len(scoruri) == 1:
+                avertismente.append(f"{p}: o singură rulare, stabilitatea scorului nu se poate judeca.")
+            elif interval > PRAG_INSTABIL:
+                avertismente.append(
+                    f"{p}: scorul variază cu {fmt(interval)} puncte între rulări, "
+                    f"peste pragul de {fmt(PRAG_INSTABIL)}. Tratează scorul acestei persona ca zgomot."
+                )
+        print(f"| **Media panelului** | | | **{fmt(media)}** | | **{nota(media)}** |")
     else:
-        print("O singură persona, fără împrăștiere.")
+        print("| Persona | Scor | Notă |")
+        print("|---|---|---|")
+        for p, scoruri in pe_persona.items():
+            print(f"| {p} | {fmt(scoruri[0])} | {nota(scoruri[0])} |")
+        print(f"| **Media** | **{fmt(media)}** | **{nota(media)}** |")
+
+    print()
+    valori = list(medii.values())
+    total_rulari = sum(len(s) for s in pe_persona.values())
+    if len(valori) > 1:
+        print(f"Împrăștiere între persona: abatere standard {fmt(statistics.stdev(valori))}, "
+              f"interval {fmt(min(valori))} - {fmt(max(valori))}, "
+              f"{len(valori)} persona, {total_rulari} rulări.")
+    else:
+        print(f"O singură persona ({total_rulari} rulări), fără împrăștiere între persona.")
     for a in avertismente:
         print(f"ATENȚIE: {a}")
     if erori:

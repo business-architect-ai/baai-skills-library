@@ -2,7 +2,7 @@
 name: sus-panel
 compatibility: claude-code-only
 license: MIT
-description: "Test de uzabilitate cu utilizatori simulați. Te întreabă cine se uită la material, construiește 3-5 persona diferite între ele, le pune să parcurgă materialul ca niște oameni reali (fiecare ca subagent separat), apoi scoate un raport cu frecările găsite și, unde se potrivește, scorul SUS (System Usability Scale) calculat de un script. Merge pe site live, fișier local, text sau PDF și capturi de ecran. Se declanșează cu /sus-panel sau la formulări ca „testează asta cu utilizatori”, „ce ar zice un client care vede pagina”, „scor SUS”, „test de uzabilitate”, „fă un panel de utilizatori”."
+description: "Test de uzabilitate cu utilizatori simulați. Te întreabă cine se uită la material, construiește 3-5 persona diferite între ele (sau până la 10 în panel lărgit, opțional cu 2-3 repetări pe persona), le pune să parcurgă materialul ca niște oameni reali (fiecare ca subagent separat), apoi scoate un raport cu frecările găsite și, unde se potrivește, scorul SUS (System Usability Scale) calculat de un script. Merge pe site live, fișier local, text sau PDF și capturi de ecran. Se declanșează cu /sus-panel sau la formulări ca „testează asta cu utilizatori”, „ce ar zice un client care vede pagina”, „scor SUS”, „test de uzabilitate”, „fă un panel de utilizatori”."
 ---
 
 # SUS panel: test de uzabilitate cu utilizatori simulați
@@ -42,6 +42,24 @@ Află, întrebând doar ce lipsește (o întrebare pe mesaj):
    validarea câmpului de telefon”. Dacă nu există o sarcină anume: „uită-te și spune ce crezi”.
 4. **Doar pentru text de citit:** ce ar trebui să rețină cititorul, în 1-3 propoziții. Persona
    nu află asta niciodată, îl folosești doar la analiză.
+5. **Mărimea panelului.** Dacă omul nu a cerut altceva, mergi pe varianta standard și nu mai
+   întrebi. Altfel, i le prezinți pe toate trei:
+   - **standard** (implicit): 3-5 persona, câte o rulare fiecare. Găsește majoritatea
+     problemelor la un cost rezonabil.
+   - **panel lărgit**: 6-10 persona, câte o rulare fiecare. Acoperă mai multe tipuri de public,
+     dar câștigul scade repede: persona simulate vin din același model și tind să se împiedice
+     în aceleași locuri.
+   - **repetări**: fiecare persona rulează de 2 sau 3 ori, independent. Arată dacă scorul unei
+     persona e stabil sau e zgomot și care frecări apar la fiecare rulare. Se poate combina cu
+     panelul lărgit.
+
+### Costul, înainte de panel lărgit sau repetări
+
+Înainte să pornești o variantă care nu e standard, spune-i omului câte rulări înseamnă
+(persona × repetări) și o estimare grosieră de tokeni, apoi **așteaptă confirmarea**. Reper
+măsurat: o persona pe un ghid de ~150 de rânduri a consumat ~90.000 de tokeni. Un text lung
+sau un site live, unde fiecare pagină deschisă intră în context, costă mai mult. Spune că e o
+estimare, nu o promisiune. Pe `web`, adaugă și timpul: rulările merg una după alta.
 
 ## Pasul 2. Persona
 
@@ -49,7 +67,8 @@ Caută întâi un folder `persone/` în proiectul curent. Dacă are persona potr
 materialului, arată-i omului tabelul din `persone/README.md` și întreabă-l pe care le folosim.
 
 Dacă nu există sau nu se potrivesc, rulează onboardingul din `references/onboarding.md`:
-întrebări una câte una despre cine se uită la material. Apoi propune 3-5 persona după
+întrebări una câte una despre cine se uită la material. Apoi propune atâtea persona câte cere
+mărimea panelului (3-5 la standard și la repetări, 6-10 la panel lărgit), după
 `references/persona-sablon.md`, diferite intenționat între ele, și **așteaptă aprobarea**
 înainte să le scrii pe disc. Nu inventa date despre public. Ce nu știi, întrebi.
 
@@ -137,6 +156,13 @@ dacă e grăbit, de la cap la coadă doar dacă e genul. Te oprești acolo unde 
 
 Nicio persona nu vede reacția alteia.
 
+### Repetări
+
+Fiecare rulare e un **subagent nou**, cu exact același prompt. Nu-i spui că e o repetare și nu
+îi arăți ce a răspuns la rularea anterioară: tocmai independența rulărilor face repetarea
+utilă. În blocul JSON, toate rulările aceleiași persona poartă **același nume**, ca scriptul să
+le poată grupa. Pe `web`, fiecare rulare pornește tot dintr-o sesiune curată.
+
 ## Pasul 5. Scorul (doar pentru interfețe și ghiduri)
 
 Din fiecare reacție extrage blocul JSON cu cele 10 răspunsuri SUS. Le pui într-un fișier,
@@ -147,7 +173,10 @@ python3 <calea skillului>/tools/sus_scor.py raspunsuri.json
 ```
 
 **Nu calcula scorul de mână.** Scriptul aplică formula, verifică răspunsurile și dă media,
-împrăștierea și nota. Dacă scriptul refuză un set de răspunsuri, spune-i omului care și de ce,
+împrăștierea și nota. La repetări, grupează rulările după numele persona, arată intervalul
+dintre rulări și semnalează persona al căror scor variază cu mai mult de 15 puncte. Media
+panelului se face pe persona, nu pe rulări, ca o persona rulată de trei ori să nu cântărească
+triplu. Dacă scriptul refuză un set de răspunsuri, spune-i omului care și de ce,
 nu „repara” tu valorile.
 
 Dacă un subagent a abandonat înainte să poată judeca materialul, completează totuși
@@ -162,7 +191,12 @@ Construiește-l după `references/raport-sablon.md`. Reguli ferme:
   concluzia, nu un gol de umplut.
 - **Vocea rămâne în carantină.** Citatele persona stau neșlefuite, în secțiunea lor.
 - **Ce au găsit mai multe persona independent are încredere mai mare.** Separi asta clar de
-  ce a găsit una singură.
+  ce a găsit una singură. Numeri persona, nu rulări: aceeași frecare găsită de o persona în
+  trei rulări înseamnă tot o singură persona.
+- **La repetări, separi frecările stabile de cele întâmplătoare.** O frecare e stabilă pentru o
+  persona dacă apare în majoritatea rulărilor ei (2 din 2, 2 din 3, 3 din 3). Una apărută
+  într-o singură rulare din mai multe o marchezi ca întâmplătoare. Persona cu scor instabil
+  (semnalate de script) le pomenești explicit și nu le iei scorul drept concluzie.
 - **Scorul SUS vine cu avertismentul lui**, mereu: e orientativ, modelele tind să-l umfle,
   iar valoarea testului stă în frecări, nu în cifră.
 - **Pentru text de citit**, compari ce a reținut fiecare persona cu mesajul de la Pasul 1.4.

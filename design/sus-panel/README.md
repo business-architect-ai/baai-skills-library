@@ -5,8 +5,8 @@ s-au împiedicat. La final primești frecările ordonate după gravitate și, pe
 ghiduri, scorul SUS (System Usability Scale), calculat de un script, nu estimat de model.
 
 Skillul nu știe nimic despre publicul tău până nu te întreabă. Pornește cu un onboarding
-scurt despre cine se uită la material, propune 3-5 persona diferite între ele și le scrie pe
-disc doar după ce le aprobi. Data viitoare le refolosești.
+scurt despre cine se uită la material, propune persona diferite între ele (3-5 implicit,
+până la 10 dacă vrei) și le scrie pe disc doar după ce le aprobi. Data viitoare le refolosești.
 
 ## Când îl folosești
 
@@ -31,6 +31,19 @@ verifici frecările grave cu 3-5 oameni reali.
 - **Abandonul e un rezultat.** Persona se opresc unde s-ar opri un om real și spun de ce.
 - **Două straturi separate.** Persona scrie doar reacția brută. Analiza, severitățile și
   recomandările le face sesiunea principală, după aceea.
+
+## Mărimea panelului
+
+| Variantă | Ce face | Când merită |
+|---|---|---|
+| **Standard** (implicit) | 3-5 persona, câte o rulare | Aproape mereu. Găsește majoritatea problemelor la un cost rezonabil |
+| **Panel lărgit** | 6-10 persona, câte o rulare | Când publicul tău e foarte variat și 5 profiluri nu-l acoperă |
+| **Repetări** | Fiecare persona rulează de 2-3 ori, independent | Când vrei să știi dacă scorul unei persona e stabil sau zgomot și care frecări apar de fiecare dată |
+
+Panelul lărgit și repetările se pot combina. Înainte să pornească o variantă care nu e
+standard, skillul îți spune câte rulări înseamnă și o estimare de tokeni, apoi așteaptă
+confirmarea. Reper: o persona pe un ghid de ~150 de rânduri consumă în jur de 90.000 de tokeni.
+Persona simulate vin din același model, deci câștigul de la persona în plus scade repede.
 
 ## Chestionarul, după tipul materialului
 

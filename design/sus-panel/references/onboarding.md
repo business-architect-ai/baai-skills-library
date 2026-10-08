@@ -1,8 +1,8 @@
 # Onboarding: cine se uită la material
 
-Scopul e să afli destul despre public cât să construiești 3-5 persona credibile și **diferite
-între ele**. Nu un chestionar de marketing. Întrebi doar ce schimbă felul în care un om
-parcurge materialul.
+Scopul e să afli destul despre public cât să construiești persona credibile și **diferite
+între ele**: 3-5 la panelul standard, 6-10 la panelul lărgit. Nu un chestionar de
+marketing. Întrebi doar ce schimbă felul în care un om parcurge materialul.
 
 ## Cum întrebi
 
@@ -31,7 +31,8 @@ parcurge materialul.
 
 ## Cum alegi persona
 
-Din răspunsuri, propui 3-5 persona care **diferă intenționat** pe axele care contează:
+Din răspunsuri, propui numărul de persona cerut de mărimea panelului, care **diferă
+intenționat** pe axele care contează:
 
 | Axă | Capete |
 |---|---|
@@ -40,6 +41,10 @@ Din răspunsuri, propui 3-5 persona care **diferă intenționat** pe axele care 
 | Dispozitiv | telefon, o mână ↔ laptop, ecran mare |
 | Motivație | doar se uită ↔ are o problemă urgentă |
 | Încredere | sceptic, a mai fost păcălit ↔ vine recomandat, deja convins |
+
+La panelul lărgit, fiecare persona în plus trebuie să aducă o combinație nouă pe aceste axe,
+nu o variantă a uneia deja existente. Dacă nu găsești destule combinații reale, propui mai
+puține și spui de ce.
 
 Nu acoperi toate combinațiile. Alege-le pe cele reale pentru publicul descris și asigură-te că
 nu ai trei persona care se comportă la fel. Cel puțin una trebuie să fie la capătul dificil al
