@@ -66,11 +66,12 @@ doar ce adaugi) și scrii după confirmare.
 
 ## Decizii
 
-[câte o linie: „AAAA-LL-ZZ: decizia. Motiv: de ce.”, din răspunsul la întrebarea 2]
+- [câte un element de listă: „AAAA-LL-ZZ: decizia. Motiv: de ce.”, din răspunsul la întrebarea 2]
 ```
 
 „Unde am rămas” are maximum 10 rânduri și se rescrie, nu se lungește. „Decizii” doar
-crește; o decizie schimbată primește o linie nouă care o înlocuiește pe cea veche,
+crește, fiecare decizie pe un rând care începe cu `- ` (fără liniuță, rândurile se lipesc
+într-un paragraf în previzualizare); o decizie schimbată primește o linie nouă care o înlocuiește pe cea veche,
 cu motivul schimbării.
 
 **`CLAUDE.md`** (dacă nu există, îl creezi; dacă există, adaugi doar secțiunea de mai jos,
@@ -86,7 +87,7 @@ la final, dacă nu e deja acolo):
 La începutul fiecărei sesiuni citești DECIZII.md.
 
 Când luăm o decizie sau când te corectez, o scrii în DECIZII.md înainte să mergi mai
-departe: o linie, „AAAA-LL-ZZ: decizia. Motiv: de ce.” Când se schimbă stadiul
+departe: un rând de listă, „- AAAA-LL-ZZ: decizia. Motiv: de ce.” Când se schimbă stadiul
 proiectului, rescrii „Unde am rămas”.
 
 Nu scrii acolo ce e deja în cod sau în istoricul git, nici detaliile unei singure sesiuni.
