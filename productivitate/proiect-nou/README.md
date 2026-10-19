@@ -43,6 +43,7 @@ Testul sesiunii goale: `/clear` (sau o sesiune nouă în același folder), apoi 
 ## Ce face și ce nu face
 
 - Pune întrebări una câte una: ce construiești, ce ai decis deja (cu motiv), dacă e cod.
+- La un proiect în lucru, caută întâi singur deciziile în conversațiile existente ale folderului și în memoria automată a proiectului, apoi ți le dă spre confirmare. Nicio decizie găsită nu intră în fișier fără acordul tău.
 - Nu inventează decizii și nici motive. Unde nu ai spus motivul, scrie „Motiv: nespecificat”.
 - Nu face commit fără confirmarea ta.
 
