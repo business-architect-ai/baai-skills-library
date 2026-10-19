@@ -93,6 +93,7 @@ done
 | [opportunity-solution-tree](productivitate/opportunity-solution-tree/) | `/opportunity-solution-tree` | Product discovery tree: outcome, oportunități, soluții și experimente |
 | [pre-mortem](productivitate/pre-mortem/) | `/pre-mortem` | Analiză de risc înainte de lansare: Tigers, Paper Tigers, Elephants și mitigări |
 | [rule-to-guardrail-auditor](productivitate/rule-to-guardrail-auditor/) ★ | `/rule-to-guardrail-auditor` | Auditează regulile agenților: păstrează judecata, propune controale, elimină zgomotul și protejează deciziile umane |
+| [proiect-nou](productivitate/proiect-nou/) | `/proiect-nou` | Pregătește un proiect să nu depindă de conversațiile vechi: CLAUDE.md, DECIZII.md cu motive, git |
 | [ortografie-ro](productivitate/ortografie-ro/) | `/ortografie-ro` | Corectează capitalizarea în texte românești |
 | [savebook](productivitate/savebook/) | `/savebook` | Salvează o carte sau resursă în lista de lectură |
 | [book-end](productivitate/book-end/) | `/book-end` | Încheie o sesiune de lectură: idei, citate, acțiuni |
