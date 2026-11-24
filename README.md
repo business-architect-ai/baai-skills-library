@@ -129,6 +129,7 @@ done
 | [three](dev/three/) | `/three` | Grafică 3D în browser cu Three.js |
 | [imagini-web-lp](dev/imagini-web-lp/) ★ | `/imagini-web-lp` | Reguli imagini și video pentru landing pages: AVIF/WebP, lazy loading, Hero/LCP, video autoplay și audit HTML |
 | [web-section-composer](dev/web-section-composer/) ★ | `/web-section-composer` | Compune și auditează secțiuni web după job, ierarhie vizuală, densitate, responsive și eficiență de spațiu |
+| [lean-powers](dev/lean-powers/) ★ | `/lean-powers` | Disciplina de verificare pentru agenții care scriu cod: nicio afirmație de „gata” fără dovadă. Și ca plugin Claude Code, cu poartă de verificare |
 
 ## Design
 
